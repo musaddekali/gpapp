@@ -1,0 +1,44 @@
+@use './variables'as var;
+/*--------------------------------------------------------------
+   Temporary offer
+--------------------------------------------------------------*/
+
+.temporary-offer-section {
+
+    .temp-card-wrapper {
+        display: flex;
+        justify-content: stretch;
+        flex-wrap: nowrap;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        overflow-x: auto;
+    }
+
+    .app-card {
+        flex: 0 0 80%;
+        max-width: 80%;
+        margin-right: 15px;
+
+        &__title {
+            width: 80%;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin: 0 0 10px 0;
+        }
+
+        &__details {
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        &__icon {
+            position: absolute;
+            right: 1rem;
+            top: 31%;
+            background: #239be7;
+            padding: 10px;
+            border-radius: 50%;
+            color: #fff;
+        }
+    }
+}

@@ -1,0 +1,24 @@
+@use './variables' as var;
+/*--------------------------------------------------------------
+   Loader
+--------------------------------------------------------------*/
+
+.loader-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.loader {
+    border: 2px solid darken(var.$white, 20);
+    border-top: 2px solid var.$primary-color;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 2s cubic-bezier(0.39, 0.58, 0.57, 1) infinite;
+}
+  
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }

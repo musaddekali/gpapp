@@ -1,0 +1,52 @@
+@use './variables'as var;
+
+/*--------------------------------------------------------------
+   Whats-new
+--------------------------------------------------------------*/
+
+.whats-new {
+  
+    .container {
+        position: relative;
+    }
+
+    .grip {
+        font-size: 14px;
+        padding: 5px;
+        position: absolute;
+        top: 0;
+        right: 1rem;
+        color: black;
+    }
+
+    &__card-wrapper{
+        overflow-x: auto;
+    }
+
+    &__inner{
+        width: max-content;
+    }
+
+    .app-card{
+        max-width: 15.625rem;
+        height:auto;
+        display: inline-block;
+        margin-right: 1rem;
+        overflow: hidden;
+        
+
+        &__img{
+            width: calc(100% + 30px);
+            margin-left: -15px;
+            margin-top: -15px;
+            border-radius: 10px;
+        }
+
+        &__title{
+            margin-bottom: 20px;
+        }
+
+    }
+
+}
+

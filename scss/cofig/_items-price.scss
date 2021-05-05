@@ -1,0 +1,89 @@
+@use './variables'as var;
+
+/*--------------------------------------------------------------
+   items-price
+--------------------------------------------------------------*/
+
+.items-price {
+
+    &__type {
+        display: flex;
+        margin-bottom: 20px;
+
+        h3 {
+            flex-grow: 1;
+            text-align: center;
+            padding: .5rem 0;
+            border-bottom: 2px solid transparent;
+            -webkit-transition: 0.3s;
+            transition: 0.3s;
+            cursor: pointer;
+            color: lighten(var.$dark, 7);
+
+            &:hover,
+            &.active {
+                border-color: var.$primary-color;
+            }
+        }
+    }
+
+    &__boxes {
+        padding-bottom: 1rem;
+    }
+
+    .item-price {
+        margin-bottom: 10px;
+
+        &__title {
+            font-size: 18px;
+            color: var.$dark;
+
+            i {
+                padding-right: 8px;
+                color: var.$primary-color;
+                font-size: 20px;
+            }
+        }
+
+        &__expare-date {
+            font-weight: 600;
+            padding-left: 30px;
+        }
+
+        &__price {
+            font-weight: 600;
+            float: right;
+            padding-right: 1rem;
+        }
+
+        &__redundant {
+            font-size: 14px;
+            padding: 0 3px;
+            border-radius: 5px;
+            position: absolute;
+            top: 10px;
+            right: -6px;
+            background: var.$primary-color;
+            color: var.$white;
+            box-shadow: var.$box-shadow;
+
+            &::after {
+                content: "";
+                position: absolute;
+                border: 6px solid;
+                border-color: #239be7 transparent transparent transparent;
+                right: 1px;
+                transform: rotate(127deg);
+                bottom: -4px;
+                border-top-left-radius: 5px;
+            }
+        }
+    }
+
+    &__see-more-btn {
+        text-align: center;
+        padding: 10px 0;
+        font-weight: bold;
+    }
+
+}

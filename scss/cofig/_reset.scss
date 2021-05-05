@@ -1,0 +1,38 @@
+@use './variables' as var;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, html{
+    line-height: 1.5;
+    font-size: 1rem;
+    font-family: 'Roboto',Arial, Helvetica, sans-serif;
+    color: #444;
+    background-color: #f3f3f3;
+}
+
+a{
+    text-decoration: none;
+    color: var.$primary-color;
+
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
+ul, ol{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+hr{
+    margin: 1rem 0;
+    border: 0;
+    color: inherit;
+    background: #a5a5a5;
+    height: 1px;
+    opacity: .6;
+}

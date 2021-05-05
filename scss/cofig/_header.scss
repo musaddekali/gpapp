@@ -1,0 +1,66 @@
+@use './variables' as var;
+
+/*--------------------------------------------------------------
+   Header
+--------------------------------------------------------------*/
+.header {
+    width: 100vw;
+    color: var.$white;
+    padding-top: .875rem;
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+ // for top-mobile-bar
+    &::before{
+        content: '';
+        display: block;
+        height: 20px;
+        background-image: url("../img/mobile_top-bar.jpg");
+        background-position: top right;
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+
+    &__profile {
+        padding: 5px 0;
+        color: var.$white;
+
+        &-img {
+            width: 45px;
+            border: 2px solid var.$white;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+
+        &-username{
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+    }
+
+    &__icons {
+        a {
+            padding: 5px 10px;
+
+            &:hover i {
+                color: darken(var.$white, 20);
+            }
+        }
+
+        i {
+            color: var.$white;
+            transition: 0.3s;
+        }
+    }
+}
+
+
+.main{
+    margin-top: 72px;
+}

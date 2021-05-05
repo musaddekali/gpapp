@@ -1,0 +1,50 @@
+@use './variables' as var;
+
+/*--------------------------------------------------------------
+   Features
+--------------------------------------------------------------*/
+
+.features{
+    
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 1.5rem;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  &__item {
+    display: grid;
+    justify-items: center;
+
+    i {
+      border-radius: 50%;
+      color: #fff;
+      width: 35px;
+      height: 35px;
+      display: grid;
+      place-items: center;
+    }
+
+    //all i color loop
+    @for $i from 1 through 8 {
+      &:nth-of-type(#{$i}) i {
+        background-color: hsl((155 + $i * 50), 81%, 40%);
+      }
+    }
+
+    p {
+      font-weight: 600;
+      font-size: 14px;
+    margin-top: 10px;
+    }
+
+  }
+  &__see-more-btn{
+    text-align: center;
+    padding: 10px 0;
+    font-weight: bold;
+}
+}

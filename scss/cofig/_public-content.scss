@@ -1,0 +1,45 @@
+@use './variables' as var;
+
+/*--------------------------------------------------------------
+   Public-contents
+--------------------------------------------------------------*/
+
+.public-content{
+    padding-top: 0;
+
+    &__box{
+        margin: 1rem 0;
+    }
+  
+   &__title{
+       margin: 1rem 0;
+       padding: 0 1.5rem;
+   }
+   &__res-cat{
+       display: flex;
+       justify-content: space-between;
+       font-size: .875rem;
+       padding: 2px 1.5rem;
+   }
+   &__resource{
+    color: #F44336;
+   }
+   &__footer{
+       padding: 0 1.5rem 1rem;
+    a{
+        margin-right: 1rem;
+        color: var.$dark;
+    }
+   }
+   &__like, &__dislike, &__share{
+      
+    i{
+        color: lighten(var.$dark, 30);
+        padding-right: 5px;
+        font-size: 22px;
+    }
+   }
+   &__share{
+    float: right;
+   }
+}
